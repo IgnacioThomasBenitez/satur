@@ -1,0 +1,118 @@
+/*:::Boton-Modal:::*/
+.boton-modal {
+    padding: 5px;
+}
+
+.boton-modal label {
+    padding: 3px 10px;
+    background-color: #5488a3;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 5000s ease;
+}
+
+.boton-modal label:hover {
+    background-color: #185E83;
+}
+
+/*:::Ventana Modal:::*/
+#btn-modal {
+    display: none;
+}
+
+.container-modal {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    display: none;
+    z-index: 100;
+}
+
+#btn-modal:checked ~ .container-modal {
+    display: flex;
+}
+
+.content-modal {
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    max-width: 500px; /* Puedes establecer un ancho máximo si lo deseas */
+    padding: 20px;
+    background-color: #cacaca;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    height: auto;
+    overflow-y: auto;
+}
+
+
+.content-modal h2 {
+    margin-bottom: 15px;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.content-modal p {
+    align-items: center;
+    display: flex;
+    padding: 15px 0px;
+    gap: 2em;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.img {
+    max-width: 100%;
+    border-radius: 1rem;
+    height: 50%; /* Ajusta la altura automáticamente */
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    margin: 0 auto;
+}
+
+
+.content-modal .btn-cerrar {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-modal .btn-cerrar label {
+    padding: 7px 10px;
+    background-color: #5488a3;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.content-modal .btn-cerrar label:hover {
+    background-color: #185E83;
+}
+
+.cerrar-modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/*:::Fin Ventana Modal:::*/
+
+/*** MEDIA QUERIES ***/
+@media screen and (max-width: 650px) {
+    .content-modal {
+        width: 90%;
+        min-width: 300px; /* Establece un ancho mínimo */
+        height: auto;
+    }
+}
